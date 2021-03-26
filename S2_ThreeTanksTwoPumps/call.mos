@@ -1,6 +1,7 @@
 loadModel(Modelica);
 loadFile("SuperModel_three_tanks.mo");
 loadFile("three_tanks_pumps_stable.mo");
+mkdir("build");
 cd("build");
 getErrorString();
 simulate(three_tanks_pumps_stable, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
