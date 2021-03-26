@@ -1,6 +1,7 @@
 loadModel(Modelica);
 loadFile("SuperModel_M2.mo");
 loadFile("FillingSystem.mo");
+mkdir("build");
 cd("build");
 getErrorString();
 simulate(FillingSystem, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
