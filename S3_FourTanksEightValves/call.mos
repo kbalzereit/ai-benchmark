@@ -1,0 +1,6 @@
+loadModel(Modelica);
+loadFile("SuperModel_four_tanks.mo");
+loadFile("four_tanks_stable.mo");
+cd("build");
+getErrorString();
+simulate(four_tanks_stable, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
