@@ -1,6 +1,7 @@
 loadModel(Modelica);
 loadFile("SuperModel_Heat.mo");
 loadFile("HeatElements.mo");
+mkdir("build");
 cd("build");
 getErrorString();
 simulate(HeatElementBase_Failures, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
