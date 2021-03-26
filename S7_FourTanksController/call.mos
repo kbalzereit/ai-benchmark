@@ -3,6 +3,7 @@ getErrorString();
 loadFile("Versuchsaufbau.mo");
 getErrorString();
 loadFile("IntegratorWithReset.mo");
+mkdir("build");
 cd("build");
 getErrorString();
 simulate(Versuchsaufbau, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
