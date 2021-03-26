@@ -1,6 +1,7 @@
 loadModel(Modelica);
 loadFile("SuperModel_different_heights.mo");
 loadFile("ThreeTank_Benchmark_Controller_different_heights.mo");
+mkdir("build");
 cd("build");
 getErrorString();
 simulate(ThreeTank_Benchmark_Controller, startTime = 0, stopTime=100, numberOfIntervals=500, outputFormat="csv");
